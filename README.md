@@ -44,6 +44,15 @@ When attempting to compile the same Go code to wasm. The code failed to compile 
 C:\dev\go\pkg\mod\github.com\ably\ably-go@v1.2.8\ably\websocket.go:105:6: ops.HTTPHeader undefined (type websocket.DialOptions has no field or method HTTPHeader)
 C:\dev\go\pkg\mod\github.com\ably\ably-go@v1.2.8\ably\websocket.go:106:6: ops.HTTPHeader undefined (type websocket.DialOptions has no field or method HTTPHeader)
 ```
+Tried commenting out lines 105 and 105 of `websocket.go` to see if this changed anything.
+This allowed the go code to compile to wasm.
 
+Ran the local server along side my ablyeye demo.
+
+Was able to publish a realtime message from the browser to ablyeye.
+
+I captured a gif of this running
+
+![wasm publish](ably-wasm.gif)
 
 
